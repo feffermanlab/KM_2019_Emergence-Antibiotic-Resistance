@@ -8,12 +8,12 @@ This is the first of three papers (and three respective repositories) in a serie
 
 There are three self-contained (except for import/export) Mathematica notebooks.
 
-* File 1: HIV-v25-CH1.nb
+## File 1: HIV-v25-CH1.nb
 
 Main modules are:
-  RUNCHAPTER1[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
-  RUNCHAPTER1v2[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
-  RUNCHAPTER1POP[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
+- RUNCHAPTER1[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
+- RUNCHAPTER1v2[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
+- RUNCHAPTER1POP[c1_, noaids_, lowtb_, indo_ : False, aidsprev_ : - 1]
 
 Those inputs are:
   c1, also noted c[+1] or c+, which is the adherence parameter, representing how many adhere to the protocol
@@ -30,13 +30,13 @@ The output, figures, etc. used in analysis are under heading "Executions" and mi
 
 Note that this code is used, almost as-is, for the two other papers / repos. This is because this code was done with all three in mind. Certain parameters are fixed, a few at just zero, for this version, which allows for future flexibility and use with minimal changes to the core of this code.
 
-* File 2: Sensitivity v4.nb
+## File 2: Sensitivity v4.nb
 
 This file (and the next) does the sensitivity analysis for this paper. It uses routines vec, LHC, LHP, snp, and LHCS to generate the parameter values based on Latin hypercube sampling, and then picking values randomly (using LHCS methodology) for each paramter within a provided range. That range is, subsequently, taken to be the baseline value plus or minus 10%.
 
 The subsequent block of code (still part of the first cell) outputs to a file stream the output from the RUNCHAPTER1TRIAL function. Then there are some import functions to look at these data and find the correlation between parameters and outputs, i.e. the sensitivity analysis. (See next file.)
 
-* File 3: Sensitivity v5.nb
+## File 3: Sensitivity v5.nb
 
 In this file, the data from the previous is imported and displayed in a more redable way, outputting a table (as csv and png) and a bar chart.
 
